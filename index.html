@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="flex flex-column md:flex-row justify-around ">
-        <section class="grid grid-cols-1 md:grid-cols-3 border-r-4 border-r-emerald-300">
+    <div class="flex flex-col md:flex-row justify-around ">
+        <section class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 border-0 md:border-r-4  md:border-r-emerald-300 w-4/5 justify-items-center ">
             <!-- Tringle card -->
             <div class="card w-96 bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10">
@@ -138,12 +138,14 @@
             </div>
         </section>
         <!-- sidebar -->
-        <section class="ml-3 hidden md:block">
-            <h2 class="text-3xl font-semibold underline">Area Calculation </h2>
+        <section id="sideBar" class=" text-center flex-1 p-4 hidden md:block bg-slate-300 relative">
+            <div class="fixed">
+                <h2 class="text-3xl font-semibold underline">Area Calculation </h2>
             <div>
                 <ol id="resultList">
                     
                 </ol>
+            </div>
             </div>
         </section>
     </div>
