@@ -3,7 +3,7 @@ function genaretTriAngle() {
     const triangleHeight = getInputValuById("triangleHeight")
 
     if (isNaN(triangleBase) || isNaN(triangleHeight)) {
-        alert("Provide a vaid number ");
+        alert("Please Provide a vaid number ");
         return
     }
     const area = 0.5 * triangleBase * triangleHeight;
@@ -20,7 +20,10 @@ function genaretRectangle() {
     const rectangleWidth = getInputValuById("RectangleWidth")
 
     const rectangleLength = getInputValuById("RectangleLength")
-    console.log(rectangleLength);
+    if (isNaN(rectangleWidth) || isNaN(rectangleLength)) {
+        alert("Please  Provide a vaid number ");
+        return
+    }
 
 
     const area = rectangleWidth * rectangleLength;
@@ -37,7 +40,10 @@ function genaretparallelogram() {
 
     const parallelogramHeight = getInputValuById("parallelogramLength")
 
-
+    if (isNaN(parallelogramBase) || isNaN(parallelogramHeight)) {
+        alert("Please  Provide a vaid number ");
+        return
+    }
     const area = parallelogramBase * parallelogramHeight;
 
     setElementValueByIdAndResult("resultList", area, "parallelogramTitle")
@@ -49,7 +55,10 @@ function genaretparallelogram() {
 function genaretRhombus() {
     const rhombusD1 = getInputValuById("rhombusD1")
     const rhombusD2 = getInputValuById("rhombusD2")
-
+    if (isNaN(rhombusD1) || isNaN(rhombusD2)) {
+        alert("Please  Provide a vaid number ");
+        return
+    }
 
     const area = 0.5 * rhombusD1 * rhombusD2;
 
@@ -65,7 +74,10 @@ function genaretPentagon() {
     const perimeter = getInputValuById("perimeter")
     const apothem = getInputValuById("apothem")
 
-
+    if (isNaN(perimeter) || isNaN(apothem)) {
+        alert("Please  Provide a vaid number ");
+        return
+    }
     const area = 0.5 * perimeter * apothem;
 
     setElementValueByIdAndResult("resultList", area, "pentagonTitle")
@@ -79,7 +91,10 @@ function genaretEllipse(){
     const semiMejor = getInputValuById("semiMejor")
     const semiMenor = getInputValuById("semiMenor")
 
-
+    if (isNaN(semiMejor) || isNaN(semiMenor)) {
+        alert("Please  Provide a vaid number ");
+        return
+    }
     const area = Math.PI * semiMejor * semiMenor;
 
     setElementValueByIdAndResult("resultList", area, "ellipseTitle")
