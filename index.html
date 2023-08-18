@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry genious </title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="flex flex-column md:flex-row justify-around ">
+        <section class="grid grid-cols-1 md:grid-cols-3 border-r-4 border-r-emerald-300">
+            <!-- Tringle card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="./images/triangle.png" alt="triangle" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 id="triangleTitle" class="card-title text-4xl font-bold">Triangle</h2>
+                    <p>Area (A) =0.5 X b X h</p>
+                    <div>
+                        <input id="triangleBase" type="text" placeholder="base" class="bg-slate-400 border w-20 rounded-md"> CM
+                        <input id="triangleHeight" type="text" placeholder="height" class="bg-slate-400 border w-20 ml-4 rounded-md"> CM
+                    </div>
+                    <div>
+                        <span id="trianglrDisplay" class="mr-3 font-bold text-2xl"> 00</span><span>cm <sup>2</sup></span>
+                    </div>
+                    <div class="card-actions mt-5">
+                        <button onclick="genaretTriAngle()" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Rectangle card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="./images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 id="RectangleTitle" class="card-title text-4xl font-bold">Rectangle</h2>
+                    <p>Area (A) = W X L</p>
+                    <div>
+                        <input id="RectangleWidth" type="text" placeholder="base" class="bg-slate-400 border w-20 rounded-md"> CM
+                        <input id="RectangleLength" type="text" placeholder="height" class="bg-slate-400 border w-20 ml-4 rounded-md"> CM
+                    </div>
+                    <div>
+                        <span id="ractangleDisplay" class="mr-3 font-bold"> 00</span><span>cm <sup>2</sup></span>
+                    </div>
+                    <div class="card-actions mt-5">
+                        <button onclick="genaretRectangle()" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- parallelogram card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="./images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 id="parallelogramTitle" class="card-title text-4xl font-bold">Parallelogram</h2>
+                    <p>Area (A) = B X H</p>
+                    <div>
+                        <input id="parallelogramWidth" type="text" placeholder="base" class="bg-slate-400 border w-20 rounded-md"> CM
+                        <input id="parallelogramLength" type="text" placeholder="height" class="bg-slate-400 border w-20 ml-4 rounded-md"> CM
+                    </div>
+                    <div>
+                        <span id="parallelogramDisplay" class="mr-3 font-bold"> 00</span><span>cm <sup>2</sup></span>
+                    </div>
+                    <div class="card-actions mt-5">
+                        <button onclick="genaretparallelogram()" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Rhombus card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="./images/rhombus.png" alt="rhombus" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 id="rhombusTitle" class="card-title text-4xl font-bold">Rhombus</h2>
+                    <p>Area (A) =
+                        0.5 X d<sub>1</sub>X d<sub>2</sub></p>
+                    <div>
+                        <input id="rhombusD1" type="text" placeholder="base" class="bg-slate-400 border w-20 rounded-md"> CM
+                        <input id="rhombusD2" type="text" placeholder="height" class="bg-slate-400 border w-20 ml-4 rounded-md"> CM
+                    </div>
+                    <div>
+                        <span id="rhombusDisplay" class="mr-3 font-bold"> 00</span><span>cm <sup>2</sup></span>
+                    </div>
+                    <div class="card-actions mt-5">
+                        <button onclick="genaretRhombus()" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Pentagon card -->
+              <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="./images/pentagon.png" alt="pentagon" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 id="pentagonTitle" class="card-title text-4xl font-bold">Pentagon</h2>
+                    <p>Area (A) = 0.5 X p X b</p>
+                    <div>
+                        <input id="perimeter" type="text" placeholder="base" class="bg-slate-400 border w-20 rounded-md"> CM
+                        <input id="apothem" type="text" placeholder="height" class="bg-slate-400 border w-20 ml-4 rounded-md"> CM
+                    </div>
+                    <div>
+                        <span id="pentagonDisplay" class="mr-3 font-bold"> 00</span><span>cm <sup>2</sup></span>
+                    </div>
+                    <div class="card-actions mt-5">
+                        <button onclick="genaretPentagon()" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ellipse card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="./images/ellipse.png" alt="ellipse" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 id="ellipseTitle" class="card-title text-4xl font-bold">ellipse</h2>
+                    <p>Area (A) = π ab</p>
+                    <div>
+                        <input id="semiMejor" type="text" placeholder="base" class="bg-slate-400 border w-20 rounded-md"> CM
+                        <input id="semiMenor" type="text" placeholder="height" class="bg-slate-400 border w-20 ml-4 rounded-md"> CM
+                    </div>
+                    <div>
+                        <span id="ellipseDisplay" class="mr-3 font-bold"> 00</span><span>cm <sup>2</sup></span>
+                    </div>
+                    <div class="card-actions mt-5">
+                        <button onclick="genaretEllipse()" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sidebar -->
+        <section class="ml-3 hidden md:block">
+            <h2 class="text-3xl font-semibold underline">Area Calculation </h2>
+            <div>
+                <ol id="resultList">
+                    
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/utility.js"></script>
+<script src="./js/main.js"></script>
+</body>
+
+</html>
